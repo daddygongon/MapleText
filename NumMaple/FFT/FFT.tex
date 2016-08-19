@@ -36,9 +36,9 @@
 }
 
 \newenvironment{MapleOutputGather}{%
-    \color{blue}\begin{gather}
+    \color{blue}\gather
 }{%
-    \end{gather}
+    \endgather
 }
 \newif\ifHIKI
 %\HIKItrue % TRUEの設定
@@ -61,5 +61,7 @@
 \input{TukeyAlgorithm.tex}
 \section{FFT関数を用いた結果}
 \input{FFTFunction.tex}
+\section{課題と解答例}
+\input{Ex_answers.tex}
 
 \end{document}

@@ -73,34 +73,36 @@
 \contentsline {paragraph}{Trapezoidal rule(台形公式)}{60}{section*.10}
 \contentsline {paragraph}{Simpson's rule(シンプソンの公式)}{60}{section*.11}
 \contentsline {section}{\numberline {6.7}課題}{61}{section.6.7}
-\contentsline {chapter}{\numberline {第7章}線形最小2乗法(LeastSquareFit)}{63}{chapter.7}
-\contentsline {section}{\numberline {7.1}Mapleによる最小2乗法}{63}{section.7.1}
-\contentsline {section}{\numberline {7.2}最小2乗法の原理}{64}{section.7.2}
-\contentsline {section}{\numberline {7.3}$\chi ^2$の極小値から(2変数の例)}{64}{section.7.3}
-\contentsline {section}{\numberline {7.4}正規方程式(Normal Equations)による解}{66}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Mapleによる具体例}{67}{subsection.7.4.1}
-\contentsline {section}{\numberline {7.5}特異値分解(Singular Value Decomposition)による解}{68}{section.7.5}
-\contentsline {section}{\numberline {7.6}2次元曲面へのフィット}{68}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Mapleによる具体例}{69}{subsection.7.6.1}
-\contentsline {subsection}{\numberline {7.6.2}正規方程式による解法}{70}{subsection.7.6.2}
-\contentsline {section}{\numberline {7.7}課題}{70}{section.7.7}
-\contentsline {chapter}{\numberline {第8章}非線形最小2乗法(NonLinearFit)}{73}{chapter.8}
-\contentsline {section}{\numberline {8.1}非線形最小2乗法の原理}{73}{section.8.1}
-\contentsline {section}{\numberline {8.2}具体的な手順}{74}{section.8.2}
-\contentsline {section}{\numberline {8.3}Mapleによる解法の指針}{75}{section.8.3}
-\contentsline {section}{\numberline {8.4}Gauss-Newton法に関するメモ}{78}{section.8.4}
-\contentsline {section}{\numberline {8.5}課題}{78}{section.8.5}
-\contentsline {section}{\numberline {8.6}解答例}{79}{section.8.6}
-\contentsline {chapter}{\numberline {第9章}FFT(Fast Fourier Transformation)}{81}{chapter.9}
-\contentsline {section}{\numberline {9.1}FFTの応用}{81}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}周波数分解}{81}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}高周波フィルター}{82}{subsection.9.1.2}
-\contentsline {section}{\numberline {9.2}FFTの動作原理}{84}{section.9.2}
-\contentsline {section}{\numberline {9.3}関数内挿としてのFourier関数系}{84}{section.9.3}
-\contentsline {section}{\numberline {9.4}直交関係からの積分による係数決定}{84}{section.9.4}
-\contentsline {section}{\numberline {9.5}直接積分によるフーリエ係数}{86}{section.9.5}
-\contentsline {section}{\numberline {9.6}選点直交性による計算の簡素化}{88}{section.9.6}
-\contentsline {paragraph}{直交関数系の選点直交性}{88}{section*.12}
-\contentsline {subsection}{\numberline {9.6.1}選点直交性を用いた結果}{89}{subsection.9.6.1}
-\contentsline {section}{\numberline {9.7}高速フーリエ変換アルゴリズムによる高速化}{90}{section.9.7}
-\contentsline {section}{\numberline {9.8}FFT関数を用いた結果}{92}{section.9.8}
+\contentsline {section}{\numberline {6.8}解答例}{61}{section.6.8}
+\contentsline {chapter}{\numberline {第7章}線形最小2乗法(LeastSquareFit)}{67}{chapter.7}
+\contentsline {section}{\numberline {7.1}Mapleによる最小2乗法}{67}{section.7.1}
+\contentsline {section}{\numberline {7.2}最小2乗法の原理}{68}{section.7.2}
+\contentsline {section}{\numberline {7.3}$\chi ^2$の極小値から(2変数の例)}{68}{section.7.3}
+\contentsline {section}{\numberline {7.4}正規方程式(Normal Equations)による解}{70}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Mapleによる具体例}{71}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}特異値分解(Singular Value Decomposition)による解}{72}{section.7.5}
+\contentsline {section}{\numberline {7.6}2次元曲面へのフィット}{72}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Mapleによる具体例}{73}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}正規方程式による解法}{74}{subsection.7.6.2}
+\contentsline {section}{\numberline {7.7}課題}{74}{section.7.7}
+\contentsline {chapter}{\numberline {第8章}非線形最小2乗法(NonLinearFit)}{77}{chapter.8}
+\contentsline {section}{\numberline {8.1}非線形最小2乗法の原理}{77}{section.8.1}
+\contentsline {section}{\numberline {8.2}具体的な手順}{78}{section.8.2}
+\contentsline {section}{\numberline {8.3}Mapleによる解法の指針}{79}{section.8.3}
+\contentsline {section}{\numberline {8.4}Gauss-Newton法に関するメモ}{82}{section.8.4}
+\contentsline {section}{\numberline {8.5}課題}{82}{section.8.5}
+\contentsline {section}{\numberline {8.6}解答例}{83}{section.8.6}
+\contentsline {chapter}{\numberline {第9章}FFT(Fast Fourier Transformation)}{85}{chapter.9}
+\contentsline {section}{\numberline {9.1}FFTの応用}{85}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}周波数分解}{85}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}高周波フィルター}{86}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}FFTの動作原理}{88}{section.9.2}
+\contentsline {section}{\numberline {9.3}関数内挿としてのFourier関数系}{88}{section.9.3}
+\contentsline {section}{\numberline {9.4}直交関係からの積分による係数決定}{88}{section.9.4}
+\contentsline {section}{\numberline {9.5}直接積分によるフーリエ係数}{90}{section.9.5}
+\contentsline {section}{\numberline {9.6}選点直交性による計算の簡素化}{92}{section.9.6}
+\contentsline {paragraph}{直交関数系の選点直交性}{92}{section*.12}
+\contentsline {subsection}{\numberline {9.6.1}選点直交性を用いた結果}{93}{subsection.9.6.1}
+\contentsline {section}{\numberline {9.7}高速フーリエ変換アルゴリズムによる高速化}{94}{section.9.7}
+\contentsline {section}{\numberline {9.8}FFT関数を用いた結果}{96}{section.9.8}
+\contentsline {section}{\numberline {9.9}課題と解答例}{97}{section.9.9}

@@ -1,0 +1,47 @@
+\begin{itemize}
+\item[課題]
+
+下の例に従って，sin(i/13)とsin(i/2)の合成波を作成し，FFTをかけた後，周波数での強度を表示せよ．合成波(2*sin(i*2)+sin(i/2))との違いをのべよ．
+\item[解答例]
+
+\begin{MapleInput}
+restart:
+funcs:=[sin(i/13),sin(i/2)];
+#funcs:=[2*sin(i*2),sin(i/2)];
+plot(funcs,i=0..300);
+\end{MapleInput}
+\begin{MapleOutput}
+{\it funcs}\, := \,[\sin \left( i/13 \right) ,2\,\sin \left( i/2 \right) ]
+\end{MapleOutput}
+\MaplePlot{50mm}{./figures/FFTExplot2d1.eps}
+
+\begin{MapleInput}
+> data1:=[]:
+for i from 1 to 256 do
+  data1:=[op(data1),
+   evalf(funcs[1]+funcs[2])]; 
+#   evalf(funcs[1])]; 
+end do:
+with(plots): 
+listplot(data1);
+\end{MapleInput}
+\MaplePlot{50mm}{./figures/FFTExplot2d2.eps}
+
+\begin{MapleInput}
+> X:=array(data1): 
+Y:=array(1..256,sparse):
+FFT(8,X,Y);
+\end{MapleInput}
+\begin{MapleOutput}
+256
+\end{MapleOutput}
+
+\begin{MapleInput}
+> Data2:=[seq([i,sqrt(X[i]^2+Y[i]^2)],i=1..128)]:
+plot(Data2);
+\end{MapleInput}
+\begin{MapleOutput}
+\end{MapleOutput}
+\MaplePlot{100mm}{./figures/FFTExplot2d3.eps}
+
+\end{itemize}
