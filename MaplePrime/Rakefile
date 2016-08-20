@@ -56,8 +56,7 @@ task :tidy do
     p dir
     begin 
       FileUtils.cd(dir)
-#      FileUtils.rm('*[%~#] .*[%~#] core *.log *.dvi *.aux pout.dat *.bak *.synctex.gz',:verbose=>true,:noop=>true)
-      FileUtils.rm('*[%~#] .*[%~#] core *.log *.dvi *.aux pout.dat *.bak *.synctex.gz',:verbose=>true)
+      system '\rm *[%~#] .*[%~#] core *.log *.dvi *.aux pout.dat *.bak *.synctex.gz'
     rescue => ex
       puts #{ex.class}
     end
