@@ -2,8 +2,8 @@ task :default do
   system 'rake -T'
 end
 
-desc "make documents by mk_maple_hiki"
-task :maple do
+desc "make hiki documents by mk_maple_hiki"
+task :hiki do
   dirs=Dir.glob('./*')
   dirs.each{|directory|
     next unless FileTest.directory?(directory)
@@ -34,3 +34,49 @@ task :strip do
   print text
 end
 
+desc "replace multiple word pairs at once commands"
+task :replace do
+  lines = File.readlines(ARGV[1])
+  text = ""
+  change_pair = [["ChartElementTwo","subsection"]]
+  lines.each{|line|
+      if md=line.match(/\A\\ChartElementTwo/)
+      line.gsub!(change_pair[0][0],change_pair[0][1])
+    end
+    text << line
+  }
+  print text
+end
+
+desc "tidy from the parents directory"
+task :tidy do
+  p target= Dir.pwd
+  t_dir=Dir.glob(File.join(target,'*'))
+  t_dir.each{|dir|
+    p dir
+    begin 
+      FileUtils.cd(dir)
+#      FileUtils.rm('*[%~#] .*[%~#] core *.log *.dvi *.aux pout.dat *.bak *.synctex.gz',:verbose=>true,:noop=>true)
+      FileUtils.rm('*[%~#] .*[%~#] core *.log *.dvi *.aux pout.dat *.bak *.synctex.gz',:verbose=>true)
+    rescue => ex
+      puts #{ex.class}
+    end
+  }
+end
+
+desc "delete old hiki files for reducing the size"
+task :delete_old_hiki =>[:tidy] do
+  target=ARGV[1] || './'
+  t_dir=Dir.glob(File.join(target,'*'))
+  t_dir.each{|dir|
+    files = Dir.glob(File.join(dir,'*'))
+    p tex = Dir.glob(File.join(dir,'*.tex'))
+    files.each{|file|
+      ishiki = File.basename(file)
+      if tex.include?(File.join(dir,"#{ishiki}.tex"))
+        FileUtils.rm(File.join(dir,ishiki),:noop=>true,:verbose=>true)
+        #FileUtils.rm(File.join(dir,ishiki),:verbose=>true)
+      end
+    }
+  }
+end
