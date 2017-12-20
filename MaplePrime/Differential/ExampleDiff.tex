@@ -1,10 +1,13 @@
 \subsection{例題:関数の微分と増減表}
+
 次の関数とその1次導関数を同時にプロットし概形を確認し，さらに増減表を求めよ．
+
 \begin{equation*}
 \frac {x}{{x}^{2}-2x+4}
 \end{equation*}
 
 \paragraph{解答例}
+
 \begin{MapleInput}
 > f0:=unapply(x/(x^2-2*x+4),x):
 > df:=unapply(diff(f0(x),x),x);

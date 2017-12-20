@@ -1,5 +1,6 @@
 \begin{enumerate}
 \item 補間と近似の違いについて，適切な図を描いて説明せよ．
+
 \item 次の4点
 \begin{MapleInput}
 x y 
@@ -13,6 +14,70 @@ x y
 $\tan(5^\circ)=0.08748866355$, 
 $\tan(10^\circ)=.1763269807$,
 $\tan(15^\circ)=.2679491924$の値を用いて，ラグランジュ補間法により，$\tan(17^\circ)$の値を推定せよ．(2008年度期末試験）
+
+\item
+(対数関数のニュートンの差分商補間:2014期末試験，25点) 
+
+2を底とする対数関数(Mapleでは$\log[2](x)$)の$F(9.2)=2.219203$をニュートンの差分商補間を用いて求める．ニュートンの内挿公式は，
+\begin{equation*}
+\begin{array}{rc}
+F (x )&=F (x _{0})+
+(x -x _{0})f _{1}\lfloor x_0,x_1\rfloor+
+(x -x _{0})(x -x _{1})
+f _{2}\lfloor x_0,x_1,x_2\rfloor + \\
+& \cdots +  \prod_{i=0}^{n-1} (x-x_i) \, 
+f_n \lfloor x_0,x_1,\cdots,x_n \rfloor
+\end{array}
+\end{equation*}
+である．ここで$f_i \lfloor\, \rfloor$ は次のような関数を意味していて，
+\begin{eqnarray*}
+%\begin{array}{rl}
+f _{1}\lfloor x_0,x_1\rfloor &=&  \frac{y_1-y_0}{x_1-x_0} \\
+f _{2}\lfloor x_0,x_1,x_2\rfloor &=&  \frac{f _{1}\lfloor x_1,x_2\rfloor-
+f _{1}\lfloor x_0,x_1\rfloor}{x_2-x_0} \\
+\vdots & \\
+f _{n}\lfloor x_0,x_1,\cdots,x_n\rfloor &=&  \frac{f_{n-1}\lfloor x_1,x_2\cdots,x_{n}\rfloor-
+f _{n-1}\lfloor x_0,x_1,\cdots,x_{n-1}\rfloor}{x_n-x_0} \\
+%\end{array}
+\end{eqnarray*}
+差分商と呼ばれる．$x_k=8.0,9.0,10.0,11.0$をそれぞれ選ぶと，差分商補間のそれぞれの項は以下の通りとなる．
+\begin{equation*}
+	\begin{array}{ccl|lll}
+	\hline
+	k  &  x_k & y_k=F_0( x_k) &f_1\lfloor x_k,x_{k+1}\rfloor & f_2\lfloor x_k,x_{k+1},x_{k+2}\rfloor &  f_3\lfloor x_k,x_{k+1},x_{k+2},x_{k+3}\rfloor \\
+	\hline
+	0  &   8.0  &  2.079442  &          &              &\\
+ 	   &      &     &     0.117783     &              &\\ 
+	1  &   9.0  &  2.197225  &           &       \fbox{　　ア　　}      &\\
+ 	   &      &     &     0.105360     &              & 0.0003955000 \\
+ 	2  &  10.0  &  2.302585  &           &       -0.0050250      &\\ 
+ 	   &      &     &     0.095310    &              &\\ 
+ 	3  &  11.0  &  2.397895 &           &              &\\ 
+	\hline
+      \end{array}
+\end{equation*}
+それぞれの項は，例えば，
+\begin{equation*}
+f_2\lfloor x_1,x_2,x_3 \rfloor =\frac{0.095310-0.105360}{11.0-9.0}=-0.0050250
+\end{equation*}
+で求められる．ニュートンの差分商の一次多項式は
+\begin{equation*}
+F(x)=F_0(8.0)+(x-x_0)f_1\lfloor x_1,x_0\rfloor =2.079442+0.117783(9.2-8.0)=2.220782
+\end{equation*}
+となる．
+
+\begin{enumerate}
+\item 差分商補間の表中の開いている箇所\fbox{ ア　$f_2\lfloor x_0,x_1,x_2 \rfloor$ }を埋めよ．
+\item ニュートンの二次多項式
+\begin{equation*}
+F (x )=F (x _{0})+(x -x _{0})f _{1}\lfloor x_0,x_1\rfloor+(x -x _{0})(x -x _{1})
+f _{2}\lfloor x_0,x_1,x_2\rfloor
+\end{equation*}
+の値を求めよ．
+\item ニュートンの三次多項式の値を求めよ．
+\end{enumerate}
+ただし，ここでは有効数字7桁程度はとるように．(E.クライツィグ著「数値解析」(培風館,2003), p.31, 例4改)
+
 \item exp(0)=1.0, exp(0.1)=1.1052, exp(0.3)=1.3499の値を用いて，ラグランジュ補間法により，exp(0.2)の値を推定せよ．(2009年度期末試験）
 \item 次の関数
 \begin{equation*}

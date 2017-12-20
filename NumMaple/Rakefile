@@ -14,6 +14,13 @@ task :hiki do
   }
 
 end
+desc "make hiki documents by mk_maple_hiki"
+task :latex do
+  system "platex #{ARGV[1]}"
+  system "platex #{ARGV[1]}"
+  system "dvipdfmx #{ARGV[1]}"
+  system "open #{ARGV[1]}.pdf"
+end
 
 desc "strip multiple braces"
 task :strip do

@@ -31,17 +31,17 @@ F(x, y) = a_1+a_2\,x+a_3\,y+a_4\,xy+a_5\,x^2+a_6\,y^2
 > with(LinearAlgebra): p2:=convert(Transpose(Matrix([x,y,z])),listlist):
   pp2:=pointplot3d(p2,symbol=circle,symbolsize=30,color=black):
   with(stats): data:=[x,y,z]: 
-  fit1:=fit[leastsquare[[t,s,u], 
+  fit1:=fit[leastsquare[[s,t,u], 
     u=a1+a2*t+a3*s+a4*t*s+a5*t^2+a6*s^2, 
     {a1,a2,a3,a4,a5,a6}]](data);
 \end{MapleInput}
 \begin{MapleOutputGather}
-{\it fit1}\, := \,u=-{ 8.657142857\times 10^{-13}}- 0.000006396456800\,t+ 0.000006396438400\,s\notag \\ 
-- 5.459553587\,ts+ 25.76962838\,{t}^{2}+ 25.76962835\,{s}^{2} \notag 
+  {\it fit1}\, := \,u= 25.76962838\,{s}^{2}- 5.459553587\,st+ 25.76962835\,{t}^{2} \\ \notag
+  - 0.000006396456800\,s+ 0.000006396438400\,t-{ 8.657142857\times 10^{-13}} \notag
 \end{MapleOutputGather}
 \begin{MapleInput}
 > f1:=unapply(rhs(fit1),(s,t)):
-> pf1:=plot3d(f1(ss,uu),ss=-0.001..0.001,uu=-0.001..0.001,color=gray):
+> pf1:=plot3d(f1(ss,tt),ss=-0.001..0.001,tt=-0.001..0.001,color=gray):
 > display(pf1,pp2,axes=boxed);
 \end{MapleInput}
 \MaplePlot{50mm}{./figures/C8_LeastSquareFitplot3d4.eps}

@@ -73,7 +73,7 @@
 \contentsline {paragraph}{Trapezoidal rule(台形公式)}{60}{section*.10}
 \contentsline {paragraph}{Simpson's rule(シンプソンの公式)}{60}{section*.11}
 \contentsline {section}{\numberline {6.7}課題}{61}{section.6.7}
-\contentsline {section}{\numberline {6.8}解答例}{61}{section.6.8}
+\contentsline {section}{\numberline {6.8}解答例}{62}{section.6.8}
 \contentsline {chapter}{\numberline {第7章}線形最小2乗法(LeastSquareFit)}{67}{chapter.7}
 \contentsline {section}{\numberline {7.1}Mapleによる最小2乗法}{67}{section.7.1}
 \contentsline {section}{\numberline {7.2}最小2乗法の原理}{68}{section.7.2}
