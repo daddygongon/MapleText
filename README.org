@@ -12,8 +12,7 @@ hikiでの提供も[Mapleテキスト](http://ist.ksc.kwansei.ac.jp/~nishitani/M
 - latexはそのまま
 - hikiへは，それぞれのdirectoryでrake hikiとするとすべて自動でやってくれる．
 
-
-#begin_example
+#+begin_example
 For making maple hiki
     -v, --version                    show program Version.
         --init [NAME]                initialize NAME directory.
@@ -21,7 +20,7 @@ For making maple hiki
         --scale [VAL]%               set scale for convert figures.
         --level [VAL]                set level for head start level .
         --hiki [NAME]                make hiki contents from NAME directory.
-#end_example
+#+end_example
 
 * License
 [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/) by Shigeto R. Nishitani
