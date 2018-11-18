@@ -2,7 +2,7 @@
 * MapleText
 
 Mapleの自習用テキストのソースです．latexで作られるようにしています．
-hikiでの提供も[Mapleテキスト](http://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/)からしています．
+hikiでの提供も[[http://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/][Mapleテキスト]]からしています．
 
 - MaplePrime/
 - MapleProgramming/
